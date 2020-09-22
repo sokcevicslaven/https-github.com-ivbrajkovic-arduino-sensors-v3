@@ -1,0 +1,1 @@
+SELECT * from wine ORDER BY day asc;

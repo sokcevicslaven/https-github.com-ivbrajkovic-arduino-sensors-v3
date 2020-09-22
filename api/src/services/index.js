@@ -6,6 +6,7 @@ module.exports = {
   AuthService: require('./auth-service'),
   UserService: require('./user-service'),
   DataService: require('./data-service'),
-  SettingsService: require('./settings-service'),
-  EncryptService: require('./encrypt-service')
+  EncryptService: require('./encrypt-service'),
+  RecipesService: require('./recipes-service'),
+  SettingsService: require('./settings-service')
 };

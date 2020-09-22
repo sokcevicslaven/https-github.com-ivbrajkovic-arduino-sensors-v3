@@ -25,17 +25,17 @@ import PasswordField from '../../components/PasswordField';
 // Custom styles
 import useStyles from './style.js';
 
-// Hooks
-import { useRedirect, useClearErrorsOnExit } from '../../hooks';
-
 // Error helpers
 import { useErrorSelector, formatErrors } from './helper';
+
+// Hooks
+// import { useRedirect, useClearErrorsOnExit } from '../../hooks';
 
 const Signup = () => {
   // console.log('Signup -> Signup page');
 
   // If loggedin, redirect to home page
-  useRedirect();
+  // useRedirect();
 
   // Custom styles
   const classes = useStyles();
@@ -49,7 +49,7 @@ const Signup = () => {
   const errors = useMemo(() => formatErrors(error), [error]);
 
   // Clear error if any on exit
-  useClearErrorsOnExit();
+  // useClearErrorsOnExit();
 
   // Submit form action
   const handleSubmit = e => {
@@ -177,9 +177,11 @@ const Signup = () => {
           />
 
           {/* error message */}
-          <Typography variant='h6' align='center' color='secondary'>
-            {errors.other}
-          </Typography>
+          {errors.other && (
+            <Typography variant='h6' align='center' color='secondary'>
+              {errors.other}
+            </Typography>
+          )}
 
           {/* Submit button with progress */}
           <ButtonProgress>Sign up</ButtonProgress>

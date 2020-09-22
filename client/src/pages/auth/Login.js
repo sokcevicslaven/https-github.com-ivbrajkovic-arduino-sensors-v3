@@ -103,9 +103,11 @@ const Login = () => {
           />
 
           {/* Fallback error message */}
-          <Typography variant='h6' align='center' color='secondary'>
-            {errors.other}
-          </Typography>
+          {errors.other && (
+            <Typography variant='h6' align='center' color='secondary'>
+              {errors.other}
+            </Typography>
+          )}
 
           {/* Submit button with progress */}
           <ButtonProgress>Log In</ButtonProgress>

@@ -32,7 +32,7 @@ const initState = {
 };
 
 const uiReducer = (state = initState, action) => {
-  console.log('uiReducer -> action.type', action.type);
+  // console.log('uiReducer -> action.type', action.type);
 
   switch (action.type) {
     /********************************************************

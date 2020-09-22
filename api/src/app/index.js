@@ -35,6 +35,10 @@ app.use(require('express').static(static));
 app.use(`${config.app.baseApiUrl}/user`, require('@api/routes').userRoute);
 app.use(`${config.app.baseApiUrl}/data`, require('@api/routes').dataRoute);
 app.use(
+  `${config.app.baseApiUrl}/recipes`,
+  require('@api/routes').recipesRoute
+);
+app.use(
   `${config.app.baseApiUrl}/settings`,
   require('@api/routes').settingsRoute
 );
@@ -44,7 +48,7 @@ app.use((req, res, next) =>
   next(new ErrorHandler(errorMessages.PAGE_NOT_FOUND))
 );
 
-// Deafult error handler
+// Default error handler
 app.use((err, req, res, next) => {
   debug(err);
   ErrorHandler.handlerError(err, res);

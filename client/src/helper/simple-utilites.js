@@ -40,7 +40,10 @@ export const formatTime = date => {
 export const randomNum = N => Math.floor(Math.random() * N);
 
 // Check if value is a digit
-export const isNumber = key => /[0-9]/.test(key);
+export const isNumber = key => /^[0-9]+$/.test(key);
+
+// Check if value is a digit
+// export const isNumber = key => /^\d+$/.test(key);
 
 // Remove leading zeros from string
 export const trimLeadingZeros = str => str.replace(/^0+/, '');

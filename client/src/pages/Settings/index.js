@@ -53,7 +53,7 @@ import { fetchHelper } from '../../helper';
 // Update arduino settings into database
 const updateArduino = async (data, dispatch) => {
   try {
-    // Fetch update arduio API
+    // Fetch update arduino API
     await fetchHelper({
       url: '/settings',
       method: 'PUT',
@@ -102,6 +102,7 @@ const Settings = () => {
     dispatchReducer({
       type: 'SET_CONTROL',
       payload: { selected, name, value: checked ? 1 : 0 }
+      // payload: { selected, name, value: checked ? true : false }
     });
     updateArduino(state.arduinos[selected], dispatchReducer);
   };

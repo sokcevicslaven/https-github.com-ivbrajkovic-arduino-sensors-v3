@@ -1,11 +1,11 @@
 /**
- * User controller
+ * Data controller
  */
 
-// User services
+// Data services
 const { DataService } = require('@api/services');
 
-module.exports = class UserController {
+module.exports = class DataController {
   /**************************************************************
    * Select last N rows
    @param {*} data Client req 

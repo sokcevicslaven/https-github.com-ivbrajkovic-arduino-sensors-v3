@@ -11,7 +11,7 @@ const config = require('@api/config');
 // Read query files in "./sql"
 const sql = require('./sql/utils/read-sql').read(__dirname + '/sql');
 
-// Print sueries object if debug mode
+// Print queries object if debug mode
 config.db.debugSQL && sql.print();
 
 /**
@@ -27,6 +27,7 @@ class DB extends Database {
       ${sql.queries.table.data}
       ${sql.queries.table.users}
       ${sql.queries.table.settings}
+      ${sql.queries.table.recipes}
     `;
     return this.exec(queries);
   }
@@ -110,6 +111,44 @@ class DB extends Database {
      * Delete all sensor data from database
      */
     deleteAll: () => this.run(sql.queries.data['delete-all'])
+  };
+
+  /*********************************************************
+   * WINE
+   *********************************************************/
+
+  wine = {
+    /*********************************************************
+     * Select all wine recipes data
+     */
+    selectAll: () => this.all(sql.queries.recipes.wine['select-all']),
+
+    /*********************************************************
+     * Insert new row into wine recipes
+     * @param {Array} params Recipe data
+     */
+    insert: params => {
+      params.push(new Date().toISOString());
+      return this.run(sql.queries.recipes.wine.insert, params);
+    },
+
+    /*********************************************************
+     * Update row into wine recipes
+     * @param {Array} params Recipe data
+     */
+    update: params => {
+      // console.log('DB -> params', params);
+
+      return this.run(sql.queries.recipes.wine.update, params);
+    },
+
+    /*********************************************************
+     * Delete row into wine recipes
+     * @param {Array} params Recipe data
+     */
+    delete: params => {
+      return this.run(sql.queries.recipes.wine.delete, params);
+    }
   };
 }
 

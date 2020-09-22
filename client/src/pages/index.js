@@ -7,6 +7,7 @@ import Signup from '../pages/auth/Signup';
 import Home from '../pages/Home';
 import Dev from '../pages/Dev';
 import Settings from '../pages/Settings';
+import WineRecipes from '../pages/Recipes/wine';
 import History from '../pages/History';
 import About from '../pages/About';
 
@@ -20,6 +21,12 @@ export default [
     name: 'Settings',
     path: '/settings',
     Component: Settings,
+    privateRoute: true
+  },
+  {
+    name: 'Recipes',
+    path: '/recipes',
+    Component: WineRecipes,
     privateRoute: true
   },
   { name: 'History', path: '/history', Component: History, privateRoute: true },

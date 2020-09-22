@@ -179,4 +179,37 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Iml2YnJha
   }
 }
 
+### Insert wine recipes
+
+POST {{baseUrl}}/recipes
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Iml2YnJhamtvdmljQGdtYWlsLmNvbSIsImlhdCI6MTYwMDczMTU0NywiZXhwIjoxNjAwNzM4NzQ3fQ.vzUZ4OHMwi7TLqCXhXfmwt3fkz7-_JRqhuAbU3raHyM
+
+{
+  "day": 2,
+  "min": 2,
+  "max": 3
+}
+
+### Insert wine recipes
+
+DELETE {{baseUrl}}/recipes/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Iml2YnJhamtvdmljQGdtYWlsLmNvbSIsImlhdCI6MTYwMDczMTU0NywiZXhwIjoxNjAwNzM4NzQ3fQ.vzUZ4OHMwi7TLqCXhXfmwt3fkz7-_JRqhuAbU3raHyM
+
+
+### Insert wine recipes
+
+PUT {{baseUrl}}/recipes
+content-type: application/json
+
+{
+  "day": 1,
+  "min": 8,
+  "max": 9
+}
+
 ###
+
+GET {{baseUrl}}/recipes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Iml2YnJhamtvdmljQGdtYWlsLmNvbSIsImlhdCI6MTYwMDczMTU0NywiZXhwIjoxNjAwNzM4NzQ3fQ.vzUZ4OHMwi7TLqCXhXfmwt3fkz7-_JRqhuAbU3raHyM
+

@@ -11,12 +11,12 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
-const ListItemButton = ({ selected, text, icon: Icon, to }) => (
+const ListItemButton = ({ selected, primary, icon: Icon, to }) => (
   <ListItem button component={Link} to={to} selected={selected}>
     <ListItemIcon>
       <Icon />
     </ListItemIcon>
-    <ListItemText primary={text} />
+    <ListItemText primary={primary} />
   </ListItem>
 );
 

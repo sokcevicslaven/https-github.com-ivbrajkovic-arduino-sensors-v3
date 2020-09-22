@@ -72,7 +72,7 @@ module.exports = class SettingsService {
   static selectAll = async () => {
     const db = (await require(this.dbDir)).settings;
     const data = await db.selectAll();
-    debug('Settings retreived successfully');
+    debug('Settings retrieved successfully');
     return data;
   };
   /**************************************************************/

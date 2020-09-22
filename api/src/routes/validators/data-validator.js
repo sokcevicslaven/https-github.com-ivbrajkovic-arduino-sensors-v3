@@ -37,7 +37,7 @@ const checkDateField = object =>
     });
 
 /**
- * Export valitadion object
+ * Export validation object
  */
 module.exports = {
   // Check number of row param

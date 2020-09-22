@@ -31,7 +31,7 @@ router.get(
   asyncWrapper(SettingsController.selectAllNames)
 );
 
-// Insert arduino settings
+// Select arduino settings
 router.get(
   '/:id',
   privateRoute,

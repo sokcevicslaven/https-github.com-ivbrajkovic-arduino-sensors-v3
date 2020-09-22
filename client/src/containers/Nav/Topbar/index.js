@@ -29,6 +29,7 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 // Styles
 import useStyle from './style';
 
+// Get user initials
 const getInitials = user => {
   const name = user.name?.slice(0, 1).toUpperCase() || '';
   const lastname = user.lastname?.slice(0, 1).toUpperCase() || '';

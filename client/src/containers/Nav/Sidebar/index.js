@@ -18,6 +18,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
+import LocalBarIcon from '@material-ui/icons/LocalBar';
 
 // Components
 import SidebarButton from '../../../components/SidebarButton';
@@ -58,6 +59,8 @@ const Sidebar = ({ open, drawerWidth, handleDrawerClose }) => {
         <SidebarButton icon={DashboardIcon} primary='Dashboard' to='/' />
         <SidebarButton icon={DeveloperModeIcon} primary='Developer' to='/dev' />
         <SidebarButton icon={SettingsIcon} primary='Settings' to='/settings' />
+        <SidebarButton icon={LocalBarIcon} primary='Recipes' to='/recipes' />
+        <Divider />
         <SidebarButton icon={HistoryIcon} primary='History' to='/history' />
         <Divider />
         <SidebarButton icon={InfoIcon} primary='About' to='/about' />
